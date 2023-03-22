@@ -118,7 +118,10 @@ int main() {
     
     while (true) {
       cin >> currentInput;
-      if (currentInput == "exit") {
+      for (char& c : currentInput) {
+        c = toupper(c);
+      }
+      if (currentInput == "EXIT") {
         break;
       } else {
         if (isNumber == true) {
